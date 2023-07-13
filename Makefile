@@ -1,6 +1,6 @@
 NAME = libbuffguard.a
 
-SRCS = buffer_guard.c
+SRCS = buffer_guard.c invalid_addr.c
 INCS = buffer_guard.h
 OBJS = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra
