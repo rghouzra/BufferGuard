@@ -1,2 +1,2 @@
 # BufferGuard
-detect buffer overflow
+detect memory errors
