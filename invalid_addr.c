@@ -7,7 +7,8 @@ int invalid_addr(void *ptr, size_t len){
 	is_mapped = 0;
 	if(!ptr)
 		return -1;
-	pipe(fd);
+	if(pipe(fd) == -1)
+		return -1;
 	if(write(fd[1], ptr, len) < 0){
 		is_mapped = ((errno == EFAULT) * -1);
 	}
