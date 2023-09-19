@@ -1,8 +1,9 @@
-#include "buffer_guard.h
+#include "buffer_guard.h"
 
 sigjmp_buf jump_buffer;
 
 void sigsegv_handler(int signo) {
+	(void)signo;
 	siglongjmp(jump_buffer, 1);
 }
 
